@@ -1,0 +1,29 @@
+<div class="container-fluid"></div>
+<div>
+    <button class="btn btn-info m-4" routerLink="/candiupassword">Update Password</button>
+    <button class="btn btn-info m-4" routerLink="/candidate/cv">CV</button>
+    <!-- <button class="btn btn-info m-4" routerLink="/candidate/questions">Q&A</button> -->
+    <button class="btn btn-info m-4" routerLink="/results">View Results</button>
+</div>
+<div class="container-fluid">
+    <div class="row">
+        <div class="col bg-dark text-white">
+            <a class="navbar-brand">
+                CV
+            </a>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col-3 p-2">
+        </div>
+        <div class="col-6 p-2">
+            <div *ngFor="let detail of details" class="card m-1 p-1 bg-light">
+                <h3>{{detail[0]}}</h3>
+                PARTY: {{ detail[1].party}}<br>
+                STATION: {{ detail[1].area}}<br>
+                PROMISE: {{detail[1].promises}}<br>
+            </div>
+
+        </div>
+    </div>
+</div>

@@ -1,0 +1,31 @@
+<div class="container">
+    <div>
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th scope="col">Name</th>
+                    <th scope="col">Address</th>
+                    <th scope="col">Aadhar Number</th>
+                    <th scope="col">Approve/Reject</th>
+
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let x of appliedVoters">
+                    <td>{{ x[0] }}</td>
+                    <td>{{ x[1] }}</td>
+                    <td>{{ x[2] }}</td>
+                    <td><button type="button" class="btn btn-success" (click)="validateUser(x[2])">Approve</button>
+                        &nbsp;
+                        <button type="button" class="btn btn-danger">Reject</button></td>
+                </tr>
+            </tbody>
+        </table>
+        <button class="btn btn-secondary m-1" routerLink="/eca">
+            Home
+        </button>
+       
+       <span *ngIf="user!=null">{{user.name}}</span>
+
+    </div>
+</div>

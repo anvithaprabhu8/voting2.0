@@ -1,0 +1,44 @@
+
+<div class="container">
+    <div>
+        <button class="btn btn-info m-4" routerLink="/voterpassword" >Update Password</button>
+        <button class="btn btn-info m-4" routerLink="/viewcandidate">View Candidates</button>
+        <button class="btn btn-info m-4" routerLink="/viewresult">View Result</button>
+        <button class="btn btn-info m-4">Logout</button>
+    </div>
+    <h2>Result</h2>
+    <div >
+      <label for="region" ><h5>Choose your region:</h5></label>
+      <select  id="region"  class="btn btn-primary">
+      <option *ngFor="let area of areas" >{{area}}</option>
+      </select>
+
+     </div>
+
+      <div>
+        
+        <table class="table table-striped">
+            <thead>
+              <tr>
+                <th scope="col">userid</th>
+                <th scope="col">Name</th>
+                <th scope="col">Percentage</th>
+                <th scope="col">Earned votes</th>
+                <th scope="col">Total votes</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <th scope="row">1</th>
+                <td>Mark</td>
+                <td>BJP</td>
+                <td>hhhh</td>
+                <td>iiiiii</td>
+              </tr>
+            </tbody>
+          </table>
+          <button class="btn btn-secondary m-1" routerLink="/logindetails">
+            Back
+          </button>
+      </div>
+</div>

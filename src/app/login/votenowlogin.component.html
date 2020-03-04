@@ -1,0 +1,37 @@
+<div class="container-fluid">
+    <h2>Login to vote</h2>
+    <form #form="ngForm" novalidate (ngSubmit)="onLogin()" class="m-2">
+        <div class="form-group">
+            <label class="float-left" >Username</label>
+            <input class="form-control" type="text" required />
+            <span *ngIf="submitted " class="text-danger">
+               Username is required
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Login Password</label>
+            <input class="form-control" type="password"   required />
+            <span *ngIf="submitted" class="text-danger">
+               Login password is required
+            </span>
+        </div>
+        <div class="form-group">
+            <label class="float-left">Voting Password</label>
+            <a href="#" class="float-right">generate voting password!</a>
+            <input class="form-control" type="password"   required />
+            <span *ngIf="submitted" class="text-danger">
+               Voting password is required
+            </span>
+            
+        </div>
+        <div class="text-center">
+            <button class="btn btn-primary m-1" type="submit">
+                Submit
+            </button>
+            <button class="btn btn-secondary m-1" routerLink="/logindetails">
+                Back
+            </button>
+            
+        </div>
+    </form>
+    </div>
